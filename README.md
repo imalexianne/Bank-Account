@@ -19,7 +19,7 @@ As a user, I want to be see my bank balance before and after every transaction
 https://github.com/imalexianne/Bank-Account
 
 #### Support and contact details
-Please feel free to contact imanirax@yahoo.fr`````` if you have any issues or questions, ideas or concerns.
+Please feel free to contact imanirax@yahoo.fr if you have any issues or questions, ideas or concerns.
 # Technologies Used
 **Main Languages used:**
 * HTML
