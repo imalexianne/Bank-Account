@@ -43,4 +43,3 @@ $(document).ready(function(){
         $('#make_withdrawl').trigger('reset');
       })
   })
-})
