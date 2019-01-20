@@ -1,36 +1,33 @@
-var Bank = {
-    balance: 0,
-    deposit: function(amount1) {
-      this.balance = this.balance + amount1;
-    },
-    withdraw: function(amount2) {
-      this.balance = this.balance - amount2;
-    }
-  };
 
-  $(document).ready(function () {
-   if ( $("button#sub").onclick(function(event) {
-      event.preventDefault();
-  
-      var inputDeposit = $(".amount1").val();
-  
-       balance=balance+amount1;
-    console.log("your balance is:"+balance+".")
-       $(".balance").text(newBalance.toFixed());
-   }));
-  
-   if( $("button#sub").onclick(function(event) {
-        event.preventDefault();
-  
-        
-        var inputWithdraw = $(".amount2").val();
-  
-       balance=balance-amount2;
-        
-       console.log("your balance is:"+balance+".")
-       
-        $(".balance").text(newBalance.toFixed());
-  
-      
-    }));
-});
+//method for create account
+function BankAccount(name, initialDeposit, balance) {
+  this.userName = name;
+  this.firstDeposit = initialDeposit;
+  this.balance = balance;
+}
+// adding a deposit.
+BankAccount.prototype.makeDeposit = function(deposit) {
+  this.balance += deposit;
+}
+// substracting a withdrawl.
+BankAccount.prototype.makeWithdrawl = function(withdrawl) {
+  this.balance -= withdrawl;
+}
+
+//User interface logic
+$(document).ready(function(){
+  $('form#submit_new_account').submit(function(event) {
+    event.preventDefault();
+   var  inputtedFullName = $("input#user_name").val();
+   var  inputedID = $('#user_id').val();
+   var  name = $("input#user_name").val();
+     initialDeposit = parseInt($('#initial_deposit').val());
+     newBalance = initialDeposit;
+     userAccount = new BankAccount(name, initialDeposit, newBalance);
+    console.log(userAccount);
+    
+    $('.balance_here').text(`$${userAccount.balance}`);
+
+   
+  })
+})

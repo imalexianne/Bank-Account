@@ -8,31 +8,25 @@
       <link href="css/styles1.css" rel="stylesheet" type="text/css">
    </head>
    <body>
-      <h2>Bank-Account</h2>
-      <!--quiz-board login form!-->
-      
-      <div class="box">
-         <form style="border:1px solid #ccc">
-               
-            <div class="well,">
-               <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h2>DEPOSIT FORM</2>
-                  </div>
-                  <!--name-->
-                  <label for="name"><b>name</b></label>
-                  <input type="text" placeholder="Enter Name" name="name" required>
-                  <!--Id number-->
-                  <label for="identityNo"><b>Identity No </b></label>
-                  <input type="number" placeholder="Enter identityNo" name="identintyNo" required>
-                  <!--Amount-->
-                  <h2 class="deposit">Amount to deposit</b></label>
-                  <input type="number" placeholder="Amount" id="deposit" name="amount1" required>
-                  <button type="submit" id="sub">submit</button>
-               </div>
-            </div>
-            <h2 class="deposit"><a href="index.html">BACK</a></h2>
+  
+      <div id="deposits">
+         <h2>Deposit form</h2>
+         <form id="make_deposit">
+           <div class="form-group">
+             <label for="current_deposit"><b>Deposit amount</b></label><br>
+             <input type="number" class="form-control" id ="current_deposit" value="add">
+           </div>
+           <button type="submit" class="add">Deposit</button>
          </form>
-             
-      </div>
+
+         <div class="account_name_display">
+            <h3>Account Name:</h3>
+            <p><span class="accountname_here"></span></p>
+          </div>
+          <div class="account_balance_display">
+            <h3>Balance:</h3>
+            <p><span class="balance_here"></span></p>
+          </div>
+          </div>
+         <h2 class="deposit"><a href="index.html">BACK</a></h2>
 </html>

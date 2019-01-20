@@ -9,40 +9,50 @@
    </head>
    <body>
       <h2>Bank-Account</h2>
-      <!--quiz-board login form!-->
       
-      <div class="box">
-         <form style="border:1px solid #ccc">
-               
-            <div class="well,">
-               <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h2>If you dont have account create it!</2>
-                  </div>
-                  <!--name-->
-                  <label for="name"><b>name</b></label>
-                  <input type="text" placeholder="Enter Name" name="name" required>
-                  <!--Id number-->>
-                  <label for="identityNo"><b>Identity No </b></label>
-                  <input type="identintyNo" placeholder="Enter identityNo" name="identintyNo" required>
-                  <!--Amount-->
-                  <label for="amount"><b>Amount</b></label>
-                  <input type="amount" placeholder="Amount" name="amount" required>
-                  
-                  <!--submit-->
-                 <button type="submit">submit</a></button>
-               </div>
-            </div>
-          
+      
+      <div class="new_account">
+         <form id="submit_new_account">
+           <h2>Register New Account</h2>
+           <div class="form-group">
+             <label for="user_name"><b>Full Name</b></label><br>
+             <input type="text" id="user_name" class="form-control" ><br>
+           </div>
+           <div class="form-group">
+             <label for="user_password">Password</label>
+             <input type="password" id="user_password" class="form-control" value="correct">
+           </div>
+           <div class="form-group">
+             <label for="user_id">ID</label>
+             <input type="number" id="user_id" class="form-control" value="correct">
+           </div>
+           <div class="form-group">
+             <label for="initial_deposit">Initial deposit</label>
+             <input type="number" id="initial_deposit" class="form-control" value="amount">
+           </div>
+           <button type="submit" class="first">Open Account</button>
          </form>
+         </div>
+
+         <div class="account_name_display">
+            <h3>Account Name:</h3>
+            <p><span class="accountname_here"></span></p>
+          </div>
+          <div class="account_balance_display">
+            <h3>Balance:</h3>
+            <p><span class="balance_here"></span></p>
+          </div>
+      
 
          <h2 class="deposit"><a href="index1.html">DEPOSIT</a></h2>
 
-         <h2 class="deposit"><a href="index2.html">WISTHRAW</a></h2>
+         <h2 class="deposit"><a href="index2.html">WITHDRAW</a></h2>
 
-     
+         <script src="./jquery-3.3.1.min.js"></script>
+         <script src="./js/scripts.js"></script>
 
-         </div>
+         
+         
                 
     </body> 
 
