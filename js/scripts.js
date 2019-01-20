@@ -31,9 +31,17 @@ $(document).ready(function(){
     console.log(userAccount);
     $('.new_account').remove();
     $('.balance_here').text(`$${userAccount.balance}`);
+  });
 
+    $('#make_deposit').submit(function(event) {
+      event.preventDefault();
+       deposit = parseInt($('#current_deposit').val());
+      userAccount.makeDeposit(deposit);
+      $('.balance_here').text(`${userAccount.balance}`);
+      $('#make_deposit').trigger('reset');
+    });
      
-      });
+      
 
       $('#make_withdrawl').submit(function(event) {
         event.preventDefault();
